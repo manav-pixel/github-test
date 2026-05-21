@@ -1,0 +1,25 @@
+project_id: 845b6afc-5791-4dc6-bcb3-f48adfb5159e
+link_id: afa25002-1973-4dc0-b481-345c9fac2a02
+device_id: d65c2015-c579-4b29-ac70-344e95946315
+server_url: http://localhost:8000
+mappings:
+  - local: "**/*.ipynb"
+    server: "project notebooks/"
+    direction: both
+  - local: "**/*.{csv,parquet,xlsx,xls,json,tsv,txt}"
+    server: "data/"
+    direction: both
+  - local: "{outputs,results,Outputs}/**"
+    server: "Outputs/"
+    direction: pull_only
+exclude:
+  - ".env"
+  - ".venv/**"
+  - "__pycache__/**"
+  - ".mrm/**"
+  - "**/.ipynb_checkpoints/**"
+  - "**/* (conflict *)*"
+  - "**/*~"
+  - "**/*.tmp"
+  - "**/.autosave/**"
+refresh_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkOTc0YjEzNS1jZjdjLTQ1Y2MtYmFjOS0xY2I2OWVmMWUwM2QiLCJkZXZpY2VJZCI6ImQ2NWMyMDE1LWM1NzktNGIyOS1hYzcwLTM0NGU5NTk0NjMxNSIsInRva2VuVHlwZSI6ImRldmljZV9yZWZyZXNoIiwiaWF0IjoxNzc5MjA1Mjg2LCJleHAiOjE3ODE3OTcyODYsImp0aSI6IjZiOTVjYzlmLTc2ZTEtNDNmMC1hNTE0LWE5NmJiMTk2MjMyYyJ9.dTub0xT0dA9CmJ_vRrCp-NVqjtExypx0n_Zhdl5eF3c"
